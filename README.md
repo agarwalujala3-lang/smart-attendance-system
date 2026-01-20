@@ -11,71 +11,71 @@ This project was developed as part of my **industrial training at CETPA Infotech
 
 Traditional attendance systems rely on manual registers or basic digital sheets, which lead to:
 
--Human errors and data inconsistency
+- Human errors and data inconsistency
 
--Time-consuming manual processing
+- Time-consuming manual processing
 
--Proxy attendance
+- Proxy attendance
 
--Lack of real-time visibility and reporting
+- Lack of real-time visibility and reporting
 
--Difficulty in maintaining scalable records
+- Difficulty in maintaining scalable records
 
 The Smart Attendance System addresses these issues by providing a **secure, automated, and real-time cloud solution.**
 
 ## Project Objectives
 
--Automate attendance marking using facial recognition
+- Automate attendance marking using facial recognition
 
--Store attendance records securely on the cloud
+- Store attendance records securely on the cloud
 
--Prevent duplicate and proxy attendance
+- Prevent duplicate and proxy attendance
 
--Enable real-time access to attendance data
+- Enable real-time access to attendance data
 
--Design a scalable and cost-effective serverless system
+- Design a scalable and cost-effective serverless system
 
 ## AWS Services Used
 
--**Amazon S3** – Storage of facial images
+- **Amazon S3** – Storage of facial images
 
--**AWS Rekognition** – Face detection and matching
+- **AWS Rekognition** – Face detection and matching
 
--**AWS Lambda (Python)** – Backend logic execution
+- **AWS Lambda (Python)** – Backend logic execution
 
--**Amazon API Gateway** – Secure REST API endpoints
+- **Amazon API Gateway** – Secure REST API endpoints
 
--**AWS IAM** – Access control and permissions
+- **AWS IAM** – Access control and permissions
 
 ## System Architecture
 
 The system follows a **cloud-native, serverless architecture** with clearly separated layers:
 
--**User Interface Layer** – Captures images and displays results
+- **User Interface Layer** – Captures images and displays results
 
--**API Management Layer** – Handles request routing and security
+- **API Management Layer** – Handles request routing and security
 
--**Application Logic Layer** – Processes attendance logic using Lambda
+- **Application Logic Layer** – Processes attendance logic using Lambda
 
--**Data Storage Layer** – Stores images and attendance records
+- **Data Storage Layer** – Stores images and attendance records
 
 This design ensures **high availability, scalability, and minimal maintenance overhead.** 
 
 ## Architecture Workflow
 
--User captures an image from the frontend
+- User captures an image from the frontend
 
--Image is uploaded to **Amazon S3**
+- Image is uploaded to **Amazon S3**
 
--S3 event triggers **AWS Lambda**
+- S3 event triggers **AWS Lambda**
 
--Lambda sends image to **AWS Rekognition** for face matching
+- Lambda sends image to **AWS Rekognition** for face matching
 
--Rekognition returns match results
+- Rekognition returns match results
 
--Attendance is validated and stored in **DynamoDB**
+- Attendance is validated and stored in **DynamoDB**
 
--Confirmation response is returned via **API Gateway**
+- Confirmation response is returned via **API Gateway**
 
 This event-driven flow ensures **real-time attendance marking.**
 
@@ -83,63 +83,63 @@ This event-driven flow ensures **real-time attendance marking.**
 
 ### Environment Setup
 
--AWS account configured with IAM users and roles
+- AWS account configured with IAM users and roles
 
--Local development using Python and VS Code
+- Local development using Python and VS Code
 
--Secure permissions configured for all AWS services
+- Secure permissions configured for all AWS services
 
 ### Backend Logic
 
--Python-based AWS Lambda functions handle:
+- Python-based AWS Lambda functions handle:
 
--Student registration
+- Student registration
 
--Face indexing
+- Face indexing
 
--Attendance marking
+- Attendance marking
 
--Data retrieval
+- Data retrieval
 
--REST APIs exposed via API Gateway
+- REST APIs exposed via API Gateway
 
 ### Storage & Database
 
--**Amazon S3** stores facial images securely
+- **Amazon S3** stores facial images securely
 
--**Amazon DynamoDB** stores:
+- **Amazon DynamoDB** stores:
 
-    -Student details
+    - Student details
 
-    -Attendance records
+    - Attendance records
 
-    -Timestamps and status
+    - Timestamps and status
 
 ### Frontend
 
--Simple web-based interface
+- Simple web-based interface
 
--Admin panel for student registration
+- Admin panel for student registration
 
--Student panel for attendance marking
+- Student panel for attendance marking
 
--Focused on functionality rather than UI complexity
+- Focused on functionality rather than UI complexity
 
 ## Testing & Verification
 
--Unit testing of Lambda functions
+- Unit testing of Lambda functions
 
--Integration testing across AWS services
+- Integration testing across AWS services
 
--Functional testing of:
+- Functional testing of:
 
-    -Face recognition accuracy
+    - Face recognition accuracy
 
-    -Attendance storage
+    - Attendance storage
 
-    -Duplicate entry prevention
+    - Duplicate entry prevention
 
--Performance testing under concurrent usage
+- Performance testing under concurrent usage
 
 The system performed reliably and efficiently.
 
@@ -147,53 +147,53 @@ The system performed reliably and efficiently.
 
 This project was **fully deployed and tested on AWS.**
 
--Verified components include:
+- Verified components include:
 
--Working frontend interface
+- Working frontend interface
 
--DynamoDB tables with real attendance records
+- DynamoDB tables with real attendance records
 
--Active Lambda functions
+- Active Lambda functions
 
--API Gateway routes
+- API Gateway routes
 
--IAM roles with required permissions
+- IAM roles with required permissions
 
 **Additional screenshots are available in the** /screenshots **directory**, including:
 
--Frontend UI
+- Frontend UI
 
--DynamoDB tables
+- DynamoDB tables
 
--Lambda functions
+- Lambda functions
 
--API Gateway routes
+- API Gateway routes
 
--IAM permissions
+- IAM permissions
 
--S3 buckets and Rekognition collections
+- S3 buckets and Rekognition collections
 
 ## What I Learned
 
--Designing **serverless architectures** on AWS
+- Designing **serverless architectures** on AWS
 
--Integrating multiple AWS services into a single workflow
+- Integrating multiple AWS services into a single workflow
 
--Using **AWS Rekognition** for real-world applications
+- Using **AWS Rekognition** for real-world applications
 
--Managing access securely with **IAM roles and policies**
+- Managing access securely with **IAM roles and policies**
 
--Building scalable systems without managing servers
+- Building scalable systems without managing servers
 
 ## Future Enhancements
 
--Mobile application integration
+- Mobile application integration
 
--Advanced analytics and dashboards
+- Advanced analytics and dashboards
 
--Multi-organization support
+- Multi-organization support
 
--Authentication using AWS Cognito
+- Authentication using AWS Cognito
 
 ## Conclusion
 
