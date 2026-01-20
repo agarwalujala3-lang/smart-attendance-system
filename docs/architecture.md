@@ -114,7 +114,7 @@ The **Smart Attendance System** is designed to automate and simplify attendance 
 
 ### Architecture Diagram
 
-![Architecture Diagram](docs/Architecture-Diagram.png)
+![Architecture Diagram](Architecture-Diagram.png)
 
 
 ### Key Advantages
