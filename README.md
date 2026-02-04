@@ -1,201 +1,89 @@
-# Smart Attendance System (AWS | Python | Face Recognition)
+# Cloud Attendance Platform (Serverless Smart Attendance System)
+## 🚀 Overview
 
-## Overview
+A cloud-native attendance management platform designed to automate and digitize attendance tracking for educational institutions.
+Built using a serverless architecture on AWS, the system ensures scalability, reliability, and cost efficiency.
 
-The **Smart Attendance System** is a cloud-based, serverless application designed to automate attendance management using **AWS services and facial recognition technology.**
-The system eliminates manual attendance processes by securely capturing facial images, verifying identities using AWS Rekognition, and storing attendance records in a scalable cloud database.
+## 🧩 Problem Statement
 
-This project was developed as part of my **industrial training at CETPA Infotech Pvt. Ltd., Noida**, with a strong focus on **cloud architecture, service integration, and real-world AWS workflows.**
+Traditional attendance systems are manual, error-prone, and difficult to scale. Institutions require a secure, real-time, and centralized platform to manage attendance data efficiently.
 
-## Problem Statement
+This project addresses these challenges by leveraging cloud computing and serverless technologies.
 
-Traditional attendance systems rely on manual registers or basic digital sheets, which lead to:
+## 🏗️ System Architecture
 
-- Human errors and data inconsistency
+Frontend (React)
+→ API Gateway
+→ AWS Lambda (Business Logic)
+→ DynamoDB (Database)
+→ S3 (File Storage)
+→ Cognito (Authentication)
+→ AWS rekognition (Recognition)
 
-- Time-consuming manual processing
+![Architecture Diagram](./architecture.png)
 
-- Proxy attendance
+## ⚙️ Tech Stack
 
-- Lack of real-time visibility and reporting
+- **Frontend:** React, HTML, CSS, JavaScript
+- **Backend:** Python (AWS Lambda)
+- **Cloud:** AWS Lambda, API Gateway, DynamoDB, S3, Cognito, CloudWatch
+- **Tools:** Git, GitHub, Postman
 
-- Difficulty in maintaining scalable records
+## ✨ Key Features
 
-The Smart Attendance System addresses these issues by providing a **secure, automated, and real-time cloud solution.**
+- Role-based authentication (Admin, Teacher, Student)
 
-## Project Objectives
+- Real-time attendance recording
 
-- Automate attendance marking using facial recognition
+- Secure serverless APIs
 
-- Store attendance records securely on the cloud
+- Cloud-based data storage
 
-- Prevent duplicate and proxy attendance
+- Scalable architecture
 
-- Enable real-time access to attendance data
+- RESTful API design
 
-- Design a scalable and cost-effective serverless system
+## 📊 Architecture Flow
 
-## AWS Services Used
+- User authenticates via AWS Cognito.
 
-- **Amazon S3** – Storage of facial images
+- Frontend sends requests to API Gateway.
 
-- **AWS Rekognition** – Face detection and matching
+- Lambda functions process business logic.
 
-- **AWS Lambda (Python)** – Backend logic execution
+- Attendance data is stored in DynamoDB.
 
-- **Amazon API Gateway** – Secure REST API endpoints
+- Files and reports are stored in S3.
 
-- **AWS IAM** – Access control and permissions
+## 🔐 Security & Scalability
 
-## System Architecture
+- JWT-based authentication using Cognito
 
-The system follows a **cloud-native, serverless architecture** with clearly separated layers:
+- Serverless architecture for automatic scaling
 
-- **User Interface Layer** – Captures images and displays results
+- IAM-based access control
 
-- **API Management Layer** – Handles request routing and security
+- Secure API endpoints
 
-- **Application Logic Layer** – Processes attendance logic using Lambda
+## 🧪 Sample API Endpoints
+Method	Endpoint	Description
+- POST	/attendance/mark	Mark attendance
+- GET	/attendance/{id}	Fetch attendance
+- GET	/students	List students
 
-- **Data Storage Layer** – Stores images and attendance records
+## 🛠️ Installation & Setup
+git clone https://github.com/agarwalujala3-lang/cloud-attendance-platform.git
+cd cloud-attendance-platform
 
-This design ensures **high availability, scalability, and minimal maintenance overhead.** 
+## 📈 Future Improvements
 
-## Architecture Workflow
+- Analytics dashboard
 
-- User captures an image from the frontend
+- Mobile application
 
-- Image is uploaded to **Amazon S3**
+- Multi-institution support
 
-- S3 event triggers **AWS Lambda**
+## 👩‍💻 Author
 
-- Lambda sends image to **AWS Rekognition** for face matching
-
-- Rekognition returns match results
-
-- Attendance is validated and stored in **DynamoDB**
-
-- Confirmation response is returned via **API Gateway**
-
-This event-driven flow ensures **real-time attendance marking.**
-
-## Implementation Summary
-
-### Environment Setup
-
-- AWS account configured with IAM users and roles
-
-- Local development using Python and VS Code
-
-- Secure permissions configured for all AWS services
-
-### Backend Logic
-
-- Python-based AWS Lambda functions handle:
-
-- Student registration
-
-- Face indexing
-
-- Attendance marking
-
-- Data retrieval
-
-- REST APIs exposed via API Gateway
-
-### Storage & Database
-
-- **Amazon S3** stores facial images securely
-
-- **Amazon DynamoDB** stores:
-
-    - Student details
-
-    - Attendance records
-
-    - Timestamps and status
-
-### Frontend
-
-- Simple web-based interface
-
-- Admin panel for student registration
-
-- Student panel for attendance marking
-
-- Focused on functionality rather than UI complexity
-
-## Testing & Verification
-
-- Unit testing of Lambda functions
-
-- Integration testing across AWS services
-
-- Functional testing of:
-
-    - Face recognition accuracy
-
-    - Attendance storage
-
-    - Duplicate entry prevention
-
-- Performance testing under concurrent usage
-
-The system performed reliably and efficiently.
-
-## Project Evidence & Deployment Proof
-
-This project was **fully deployed and tested on AWS.**
-
-Verified components include:
-
-- Working frontend interface
-
-- DynamoDB tables with real attendance records
-
-- Active Lambda functions
-
-- API Gateway routes
-
-- IAM roles with required permissions
-
-**Additional screenshots are available in the** ![Screenshot](screenshots)**directory**, including:
-
-- Frontend UI
-
-- DynamoDB tables
-
-- Lambda functions
-
-- API Gateway routes
-
-- IAM permissions
-
-- S3 buckets and Rekognition collections
-
-## What I Learned
-
-- Designing **serverless architectures** on AWS
-
-- Integrating multiple AWS services into a single workflow
-
-- Using **AWS Rekognition** for real-world applications
-
-- Managing access securely with **IAM roles and policies**
-
-- Building scalable systems without managing servers
-
-## Future Enhancements
-
-- Mobile application integration
-
-- Advanced analytics and dashboards
-
-- Multi-organization support
-
-- Authentication using AWS Cognito
-
-## Conclusion
-
-The Smart Attendance System demonstrates a **practical implementation of cloud-based automation** using AWS.
-It highlights how serverless services can be combined to build **secure, scalable, and real-time applications** suitable for educational and organizational use.
+Ujala Agarwal
+Cloud & Backend Developer
