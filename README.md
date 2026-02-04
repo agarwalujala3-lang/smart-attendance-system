@@ -81,6 +81,14 @@ cd cloud-attendance-platform
 
 - Multi-institution support
 
+## 📊 Scalability Considerations
+
+- Designed to handle high concurrent users using serverless architecture
+
+- Stateless Lambda functions for horizontal scaling
+
+- DynamoDB for low-latency performance
+
 ## 👩‍💻 Author
 
 ```text
